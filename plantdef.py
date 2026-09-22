@@ -56,7 +56,7 @@ def get_plant_search(df, care_data, search_term):
 
 def get_plant_growth(PlantGrowth, selected_plant):
     PlantGrowth = PlantGrowth[PlantGrowth["Plant Name"] == selected_plant].copy()
-    PlantGrowth["Date"] = pd.to_datetime(PlantGrowth["Date"])
+    PlantGrowth["Date"] = pd.to_datetime(PlantGrowth["Date"],format="mixed")
     PlantGrowth = PlantGrowth.sort_values("Date")
 
     return PlantGrowth
