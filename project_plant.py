@@ -93,12 +93,13 @@ def plant_growth():
 
     selected_plant = st.selectbox("Select plant", pf.get_plant_names(data))
 
-    result = pf.get_plant_growth(growth_data, selected_plant)
+    Fillter = growth_data[growth_data["Plant Name"] == selected_plant
+    result = Fillter[["Date" , "Height]]
 
     if result.empty:
         st.error("No growth measurements found for this plant.")
     else:
-        st.line_chart(result.set_index("Date")["Height"])
+        st.line_chart(result, x = "Date" , y="Height")
 
 #---------------------------------------------------------
 
