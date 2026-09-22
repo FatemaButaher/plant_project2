@@ -38,7 +38,7 @@ def get_plant_due_care(df, care_data):
     care_data = care_data[care_data["Activity"] == "Watering"]
     last_care = care_data.drop_duplicates("Plant Name", keep="last")
     due_care_table = pd.merge(df , last_care, on="Plant Name")
-    due_care_table["Date"] = pd.to_datetime(due_care_table["Date"])
+    due_care_table["Date"] = pd.to_datetime(due_care_table["Date"], format="mixed")
     diffrence = (today_date - due_care_table["Date"]).dt.days
 
     return due_care_table[due_care_table["Watering Frequency (days)"] <= diffrence]
