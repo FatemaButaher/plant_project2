@@ -99,7 +99,7 @@ def get_season_advice(plant_name, weather):
 #---------------------------------------------------------
 
 def get_Doctor_photo(photo, plant_name):
-    prompt = f"The plant is {plant_name} say if sick or its going good, be the doctor and say what should do to recover her health if its needed, and ask for new photo after fue days to To check on her."
+    prompt = f"The plant is {plant_name}, and photo is{photo} say if sick or its going good, be the doctor and say what should do to recover her health if its needed, and ask for new photo after fue days to To check on her."
 
     return get_LLM(prompt)
 
