@@ -36,11 +36,16 @@ def get_record_care_data(df, selected_plant, activity_performed, date_acquired, 
 
 def get_plant_due_care(df, care_data):
     today_date = pd.to_datetime(datetime.date.today())
-    care_data = care_data[care_data["Activity"] == "Watering"]
+    care_data = care_data[care_data["Activity"] == "Watering"].copy()
+    care_data["Date"] = pd.to_datetime(care_data["Date"], format="mixed")
+
+    care_data = care_data.sort_values("Date")
     last_care = care_data.drop_duplicates("Plant Name", keep="last")
-    due_care_table = pd.merge(df , last_care, on="Plant Name")
-    due_care_table["Date"] = pd.to_datetime(due_care_table["Date"], format="mixed")
-    diffrence = (today_date - due_care_table["Date"]).dt.days
+
+    due_care_table = pd.merge(df, last_care, on="Plant Name")
+
+    difference = (today_date - due_care_table["Date"]).dt.days
+
 
     return due_care_table[due_care_table["Watering Frequency (days)"] <= diffrence]
     
