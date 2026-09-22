@@ -71,7 +71,7 @@ client = OpenAI(
 
 def get_LLM(prompt): 
     completion = client.chat.completions.create(
-        model="cohere/north-mini-code:free",
+        model= "dots-studio/dots-3-note-preview:free",
         messages=[
             {
                 "role": "system",
