@@ -43,12 +43,11 @@ def get_plant_due_care(df, care_data):
     care_data = care_data.sort_values("Date")
     last_care = care_data.drop_duplicates("Plant Name", keep="last")
 
-    due_care_table = pd.merge(df, last_care[["Plant Name", "Date"]], on="Plant Name")
+    due_care_table = pd.merge(df, last_care[["Plant Name", "Date"]], on="Plant Name", how="left"]]
 
     difference = (today_date - due_care_table["Date"]).dt.days
 
-    return due_care_table[ difference >= due_care_table["Watering Frequency (days)"]]
-    
+    return due_care_table[due_care_table["Date"].isna() | (difference >= due_care_table["Watering Frequency (days)"])]
 #---------------------------------------------------------
 
 def get_plant_search(df, care_data, search_term):
