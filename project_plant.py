@@ -89,7 +89,7 @@ def plant_growth():
     st.title("The plant growth")
 
     data = pf.load_data("file.csv")
-    growth_data = pf.load_data("PlantGrowth.csv")
+    growth_data = pf.load_data("plantCare.csv")
 
     selected_plant = st.selectbox("Select plant", pf.get_plant_names(data))
 
