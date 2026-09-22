@@ -2,4 +2,4 @@ A plant care project where users can add their own plants, record daily care act
 
 The App Link: https://doctorplant-93cvgn5losmbaxu6yhqjiy.streamlit.app/
 
-The Vidoe: "C:\Users\fatim\Desktop\DSB3\Project\plant_project\Recording 2026-09-22 202618.mp4"
+The Vidoe: https://drive.google.com/file/d/1UkFYREZy4YYv-7sDCCmzZlatN2v457ps/view?usp=sharing
