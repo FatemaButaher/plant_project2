@@ -2,6 +2,7 @@ import pandas as pd
 import datetime
 from openai import OpenAI
 import requests
+import streamlit
 
 def load_data(path):
     df = pd.read_csv(path)
@@ -65,7 +66,7 @@ def get_plant_growth(PlantGrowth, selected_plant):
 
 client = OpenAI(
     base_url= "https://openrouter.ai/api/v1",
-    api_key= "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"
+    api_key= st.secrets["API_KEY"]
 )
 
 def get_LLM(prompt): 
