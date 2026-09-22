@@ -25,7 +25,7 @@ def add_plant_data(df, plant_name, location, date_acquired, watering_frequency, 
 def get_record_care_data(df, selected_plant, activity_performed):
     today_date = datetime.date.today()
     
-    new_activity = pd.DataFrame([{ "Plant": selected_plant, "Activity": activity_performed, "Date": str(today_date)}])
+    new_activity = pd.DataFrame([{ "Plant": selected_plant, "Activity": activity_performed, "Date": today_date}])
     
     df = pd.concat([df, new_activity], ignore_index=True)
 
