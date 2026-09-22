@@ -1,4 +1,4 @@
-Plant Name,Activity,Date,Photo,Plant
+Plant Name,Activity,Date,Photo,
 Snake Plant,Watering,5/9/2026,snake.jpg,
 Cactus,Watering,5/9/2026,cactus.jpg,
 Snake,Watering,9/21/2026,snake.jpg,
@@ -9,5 +9,4 @@ Spider Plant,Watering,16/9/2026,spider.jpg,
 Lavender,Repotting,17/9/2026,lavender.jpg,
 Rose,Watering,18/9/2026,rose.jpg,
 Basil,Pruning,19/9/2026,basil.jpg,
-Mint,Cleaning,19/9/2026,mint.jpg,
-,Watering,2026-09-21,,Rose
+Mint,Cleaning,19/9/2026,mint.jpg
