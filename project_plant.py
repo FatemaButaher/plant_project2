@@ -89,11 +89,11 @@ def plant_growth():
     st.title("The plant growth")
 
     data = pf.load_data("file.csv")
-    growth_data = pf.load_data("plantCare.csv")
+    care_data = pf.load_data("plantCare.csv")
 
     selected_plant = st.selectbox("Select plant", pf.get_plant_names(data))
 
-    Fillter = growth_data[growth_data["Plant Name"] == selected_plant]
+    Fillter = care_data[care_data["Plant Name"] == selected_plant]
     result = Fillter[["Date" , "Height"]]
 
     if result.empty:
