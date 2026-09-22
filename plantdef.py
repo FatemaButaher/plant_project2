@@ -35,7 +35,6 @@ def get_record_care_data(df, selected_plant, activity_performed, date_acquired, 
 #---------------------------------------------------------
 
 def get_plant_due_care(df, care_data):
-    def get_plant_due_care(df, care_data):
     today_date = pd.to_datetime(datetime.date.today())
 
     care_data = care_data[care_data["Activity"] == "Watering"].copy()
