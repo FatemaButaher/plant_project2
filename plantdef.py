@@ -51,12 +51,13 @@ def get_plant_due_care(df, care_data):
     
 #---------------------------------------------------------
 
-def get_plant_search(df, care_data, search_term): 
-    due_care_table = pd.merge(df , care_data, on="Plant Name")
-    name_search = due_care_table["Plant Name"].str.lower().str.contains(search_term.lower())
-    location_search = due_care_table["Location"].str.lower().str.contains(search_term.lower())
+def get_plant_search(df, care_data, search_term):
+    search_term = search_term.strip().lower()
 
-    return due_care_table[name_search | location_search]
+    name_search = df["Plant Name"].str.lower().str.contains(search_term)
+    location_search = df["Location"].str.lower().str.contains(search_term)
+
+    return df[name_search | location_search]
 
 #---------------------------------------------------------
 
