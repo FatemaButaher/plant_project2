@@ -19,7 +19,7 @@ def add_plant():
     if st.button("Add"):
         if plant_name and location:
             df = pf.add_plant_data(data, plant_name,location, date_acquired, watering_frequency, sunlight_needs, Weather)
-            
+            st.write(df.tail())
             df.to_csv("file.csv", index=False)
             st.success(f"'{plant_name}' has been added to your collection.")
         else:
