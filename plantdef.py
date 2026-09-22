@@ -2,7 +2,7 @@ import pandas as pd
 import datetime
 from openai import OpenAI
 import requests
-import streamlit
+import streamlit as st
 
 def load_data(path):
     df = pd.read_csv(path)
