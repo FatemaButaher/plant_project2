@@ -32,13 +32,15 @@ def record_care():
     data = pf.load_data("file.csv")
     selected_plant = st.selectbox("Select plant", pf.get_plant_names(data))
     activity_performed = st.selectbox( "Activity Performed", ["Watering", "Fertilizing", "Repotting" , "Pruning"] )
+    date_acquired = st.date_input("Date acquired: ")
+    Height = st.number_input( "Enter New Plant Height: ", min_value=0, step=0.1, value=1.0 )
     uploaded_file = st.file_uploader("Upload plant photo", type=["jpg", "png"])
 
     if st.button("Add Activity"):
         
         care_data = pf.load_data("plantCare.csv")
         
-        df = pf.get_record_care_data(care_data, selected_plant, activity_performed)
+        df = pf.get_record_care_data(care_data, selected_plant, activity_performed, date_acquired, Height)
         
         if uploaded_file:
             df.loc[df.index[-1], "Photo"] = uploaded_file.name
