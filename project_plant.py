@@ -33,7 +33,7 @@ def record_care():
     selected_plant = st.selectbox("Select plant", pf.get_plant_names(data))
     activity_performed = st.selectbox( "Activity Performed", ["Watering", "Fertilizing", "Repotting" , "Pruning"] )
     date_acquired = st.date_input("Date acquired: ")
-    height_plant = st.number_input( "Enter New Plant Height: ", min_value=0, step=0.1, value=1.0 )
+    height_plant = st.number_input( "Enter New Plant Height: ", value=1.0 )
     uploaded_file = st.file_uploader("Upload plant photo", type=["jpg", "png"])
 
     if st.button("Add Activity"):
