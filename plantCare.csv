@@ -1,12 +1,32 @@
-Plant Name,Activity,Date,Height,Photo,
-Snake Plant,Watering,5/9/2026,10,snake.jpg,
-Cactus,Watering,5/9/2026,13,cactus.jpg,
-Snake,Watering,9/21/2026,16,snake.jpg,
-Aloe Vera,Watering,10/9/2026,8,aloe.jpg,
-Monstera,Cleaning,12/9/2026,9,monstera.jpg,
-Peace Lily,Watering,15/9/2026,20,peace_lily.jpg,
-Spider Plant,Watering,16/9/2026,10,spider.jpg,
-Lavender,Repotting,17/9/2026,12,lavender.jpg,
-Rose,Watering,18/9/2026,5,rose.jpg,
-Basil,Pruning,19/9/2026,8,basil.jpg,
+Plant Name,Activity,Date,Height,Photo
+Snake Plant,Watering,5/9/2026,10,snake.jpg
+Cactus,Watering,5/9/2026,13,cactus.jpg
+Snake,Watering,9/21/2026,16,snake.jpg
+Aloe Vera,Watering,10/9/2026,8,aloe.jpg
+Monstera,Cleaning,12/9/2026,9,monstera.jpg
+Peace Lily,Watering,15/9/2026,20,peace_lily.jpg
+Spider Plant,Watering,16/9/2026,10,spider.jpg
+Lavender,Repotting,17/9/2026,12,lavender.jpg
+Rose,Watering,18/9/2026,5,rose.jpg
+Basil,Pruning,19/9/2026,8,basil.jpg
 Mint,Cleaning,19/9/2026,5,mint.jpg
+Snake Plant,Watering,12/9/2026,13,snake.jpg
+Snake Plant,Watering,19/9/2026,17,snake.jpg
+Cactus,Watering,12/9/2026,15,cactus.jpg
+Cactus,Watering,19/9/2026,18,cactus.jpg
+Aloe Vera,Watering,17/9/2026,10,aloe.jpg
+Aloe Vera,Watering,22/9/2026,13,aloe.jpg
+Monstera,Watering,18/9/2026,12,monstera.jpg
+Monstera,Watering,22/9/2026,15,monstera.jpg
+Peace Lily,Watering,20/9/2026,22,peace_lily.jpg
+Peace Lily,Watering,22/9/2026,24,peace_lily.jpg
+Spider Plant,Watering,20/9/2026,12,spider.jpg
+Spider Plant,Watering,22/9/2026,14,spider.jpg
+Lavender,Watering,20/9/2026,14,lavender.jpg
+Lavender,Watering,22/9/2026,16,lavender.jpg
+Rose,Watering,20/9/2026,7,rose.jpg
+Rose,Watering,22/9/2026,9,rose.jpg
+Basil,Watering,20/9/2026,10,basil.jpg
+Basil,Watering,22/9/2026,12,basil.jpg
+Mint,Watering,20/9/2026,7,mint.jpg
+Mint,Watering,22/9/2026,9,mint.jpg
