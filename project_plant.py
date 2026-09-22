@@ -93,8 +93,12 @@ def plant_growth():
 
     selected_plant = st.selectbox("Select plant", pf.get_plant_names(data))
 
-    Fillter = care_data[care_data["Plant Name"] == selected_plant]
-    result = Fillter[["Date" , "Height"]]
+    Fillter = care_data[care_data["Plant Name"] == selected_plant].copy()
+
+    Fillter["Date"] = pd.to_datetime(Fillter["Date"], format="mixed")
+    Fillter["Height"] = pd.to_numeric(Fillter["Height"])
+
+    result = Fillter[["Date", "Height"]]
 
     if result.empty:
         st.error("No growth measurements found for this plant.")
