@@ -59,6 +59,7 @@ def due_for_care():
     if due_care.empty:
         st.success("No plants are due for care.")
     else:
+        due_care["Date"] = due_care["Date"].dt.strftime("%d/%m/%Y")
         st.write(due_care)
 
 #---------------------------------------------------------
